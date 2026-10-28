@@ -1,24 +1,19 @@
-# AEGIS
+# WARDEN
 
-**Área:** Cibersegurança · **Status:** conceito documentado, ainda sem implementação.
+![Identidade WARDEN](preview/brand.svg)
 
-AEGIS é uma plataforma modular de **monitoramento, defesa e investigação digital**. A inspiração vem de centrais tecnológicas de ficção científica, mas a implementação será uma ferramenta original, com funções reais e documentadas.
+**SEGURANÇA DEFENSIVA** · protótipo em desenvolvimento no ecossistema Zypher.
 
-## Objetivo
+[Abrir interface](https://website-kohl-six-11.vercel.app/labs/warden/) · [Escopo e limites](docs/DELIVERY-2026-10-28.md)
 
-Reunir sinais de segurança de um computador, identificar alterações relevantes, preservar registros para análise e apoiar ações defensivas previamente autorizadas.
+Verifique a integridade de arquivos por SHA-256, sem upload. Crie uma referência, exporte em JSON e compare depois. A verificação é real e local; não é um antivírus nem um EDR.
 
-## Primeira versão pretendida
+## Executar
 
-- Monitorar diretórios escolhidos pelo usuário e verificar alterações de integridade.
-- Manter um histórico local com data, origem e tipo de evento.
-- Exibir alertas simples e permitir revisar evidências.
-- Incluir testes automatizados e um modelo de permissões explícito.
+```sh
+python -m http.server 8000
+```
 
-## Evolução possível
+Abra http://localhost:8000/preview/. Nenhuma dependência npm necessária.
 
-Correlacionar eventos de processos e rede, adicionar regras de detecção, classificação de ocorrências e mecanismos seguros de resposta. Não será tratado como antivírus completo ou EDR comercial enquanto tais capacidades não forem comprovadas.
-
-**Stack a avaliar:** Python, SQLite, FastAPI e uma interface web/desktop leve. A escolha final depende do primeiro protótipo.
-
-> Projeto independente em planejamento. Nenhuma detecção, defesa ou auditoria está implementada ainda. Testes de segurança apenas em equipamentos próprios ou expressamente autorizados.
+Nome oficial: **WARDEN**. O endereço legado `Aegis` é mantido até a renomeação administrativa do repositório.
